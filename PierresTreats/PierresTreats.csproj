@@ -12,4 +12,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.Mysql" Version="5.0.0-alpha.2" />
   </ItemGroup>
-</Project>
+</Project> 
