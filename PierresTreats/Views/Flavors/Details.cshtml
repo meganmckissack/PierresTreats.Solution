@@ -9,7 +9,7 @@
 <h3>@Html.DisplayNameFor(model => model.FlavorName): @Html.DisplayFor(model => model.FlavorName)<h3>
 
   
-@* @if(@Model.JoinTreatFlavor.Count == 0)
+@if(@Model.JoinTreatFlavor.Count == 0)
 {
   <p>This flavor is not associtated with any treats</p>
 }
@@ -22,9 +22,9 @@ else
     <li>@join.Treat.TreatName</li>
   }
   </ul>
-} *@
+}
 <hr />
-<p>@Html.ActionLink("Add Treat", "Create", "Treat")</p>
+
 <p>@Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })</p>
 <p>@Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>
