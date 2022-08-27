@@ -1,8 +1,21 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+  ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+  <h1 class="display-4">Pierre's Sweet and Savory Treats</h1>
+
+
+  <ul class="list-unstyled">
+    @foreach (Treat treat in ViewBag.Treats)
+    {
+      <li>@Html.ActionLink($"{treat.TreatName}", "Details", "Treats", new { id = treat.TreatId })</li>
+    }
+
+    <ul class="list-unstyled">
+      @foreach (Flavor flavor in ViewBag.Flavors)
+      {
+        <li>@Html.ActionLink($"{flavor.FlavorName}", "Details", "Flavors", new { id = flavor.FlavorId })</li>
+      }
+    </ul>
 </div>
