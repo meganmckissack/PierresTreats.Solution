@@ -78,3 +78,7 @@ body {
   align-content: center;
   width: 90%;
 }
+
+.btn-list {
+  padding: 5px;
+}
