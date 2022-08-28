@@ -29,7 +29,7 @@ namespace PierresTreats.Controllers
       return View(model);
     }
 
-    //[Authorize]
+    [Authorize]
     public ActionResult Create()
     {
       ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "FlavorName");
@@ -60,7 +60,7 @@ namespace PierresTreats.Controllers
       return View(thisTreat);
     }
 
-    //[Authorize]
+    [Authorize]
     public ActionResult Edit(int id)
     {
       var thisTreat = _db.Treats.FirstOrDefault(treat => treat.TreatId == id);
@@ -81,7 +81,7 @@ namespace PierresTreats.Controllers
     }
     
 
-    //[Authorize]
+    [Authorize]
     public ActionResult Delete(int id)
     {
       var thisTreat = _db.Treats.FirstOrDefault(treat => treat.TreatId == id);

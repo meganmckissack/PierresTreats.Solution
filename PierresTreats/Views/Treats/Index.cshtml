@@ -12,12 +12,11 @@
   <h3>No Treats have been added yet!</h3>
 } 
 
-<ul>
+<ul class="list-group">
   @foreach(Treat Treat in Model)
   {
-    <li>@Html.ActionLink($"{Treat.TreatName}", "Details", new { id = Treat.TreatId })</li>
+    <li class="list-group-item">@Html.ActionLink($"{Treat.TreatName}", "Details", new { id = Treat.TreatId })</li>
   }
 </ul>
 <hr />
-<p>@Html.ActionLink("Add new Treat", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<p class="btn btn-outline-secondary" role="button" aria-disabled="true">@Html.ActionLink("Add new Treat", "Create")</p>

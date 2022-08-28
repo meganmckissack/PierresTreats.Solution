@@ -5,17 +5,36 @@
 <div class="text-center">
   <h1 class="display-4">Pierre's Sweet and Savory Treats</h1>
 
+  <img class="rounded" src='~/images/pastry-matic.png' alt="pastry-machine" />
 
-  <ul class="list-unstyled">
-    @foreach (Treat treat in ViewBag.Treats)
-    {
-      <li>@Html.ActionLink($"{treat.TreatName}", "Details", "Treats", new { id = treat.TreatId })</li>
-    }
-
-    <ul class="list-unstyled">
-      @foreach (Flavor flavor in ViewBag.Flavors)
-      {
-        <li>@Html.ActionLink($"{flavor.FlavorName}", "Details", "Flavors", new { id = flavor.FlavorId })</li>
-      }
-    </ul>
+  <div class="wrapper">
+    <div>
+      <div class="card" style="width: 18rem;">
+        <ul class="list-group">
+          @foreach (Treat treat in ViewBag.Treats)
+          {
+            <li class="list-group-item">@Html.ActionLink($"{treat.TreatName}", "Details", "Treats", new { id =
+            treat.TreatId
+            })</li>
+          }
+      </div>
+    </div>
+    <div>
+      <div class="card" style="width: 18rem;">
+        <ul class="list-group">
+          @foreach (Flavor flavor in ViewBag.Flavors)
+          {
+            <li class="list-group-item">@Html.ActionLink($"{flavor.FlavorName}", "Details", "Flavors", new { id =
+            flavor.FlavorId })</li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="d-grid gap-2 d-md-block">
+    <p class="btn btn-outline-secondary" role="button" aria-disabled="true">@Html.ActionLink("Create an account",
+      "Index", "Account")</p>
+    <p class="btn btn-outline-secondary" role="button" aria-disabled="true">@Html.ActionLink("Log in to your account",
+      "Index", "Account")</p>
+  </div>
 </div>

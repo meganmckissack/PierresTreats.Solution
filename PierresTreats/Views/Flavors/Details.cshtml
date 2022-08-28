@@ -8,23 +8,26 @@
 <hr />
 <h3>@Html.DisplayNameFor(model => model.FlavorName): @Html.DisplayFor(model => model.FlavorName)<h3>
 
-  
-@if(@Model.JoinTreatFlavor.Count == 0)
-{
-  <p>This flavor is not associtated with any treats</p>
-}
-else
-{
-  <h4>Treats:</h4>
-  <ul>
-  @foreach(var join in Model.JoinTreatFlavor)
-  {
-    <li>@join.Treat.TreatName</li>
-  }
-  </ul>
-}
-<hr />
+    <hr />
 
-<p>@Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })</p>
-<p>@Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })</p>
-<p>@Html.ActionLink("Back to list", "Index")</p>
+    @if (@Model.JoinTreatFlavor.Count == 0)
+    {
+      <p>This flavor is not associtated with any treats</p>
+    }
+    else
+    {
+      <h2>Treats associated with this flavor</h2>
+      <ul class="list-group">
+        @foreach (var join in Model.JoinTreatFlavor)
+        {
+          <li class="list-group-item">@join.Treat.TreatName</li>
+        }
+      </ul>
+    }
+    <hr />
+
+    <div class="d-grid gap-2 d-md-block">
+    <p class="btn btn-outline-secondary" role="button" aria-disabled="true">@Html.ActionLink("Edit Flavor", "Edit", new { id = Model.FlavorId })</p>
+    <p class="btn btn-outline-secondary" role="button" aria-disabled="true">@Html.ActionLink("Delete Flavor", "Delete", new { id = Model.FlavorId })</p>
+    <p class="btn btn-outline-secondary" role="button" aria-disabled="true">@Html.ActionLink("Back to list", "Index")</p>
+    </div>

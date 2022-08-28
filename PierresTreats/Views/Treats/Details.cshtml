@@ -16,15 +16,17 @@
 else
 {
   <h4>Flavors:</h4>
-  <ul>
+  <ul class="list-group">
   @foreach(var join in Model.JoinTreatFlavor)
   {
-    <li>@join.Flavor.FlavorName</li>
+    <li class="list-group-item">@join.Flavor.FlavorName</li>
   }
   </ul>
 }
 <hr />
 
-<p>@Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId })</p>
-<p>@Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId })</p>
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<div class="d-grid gap-2 d-md-block">
+<p class="btn btn-outline-secondary" role="button" aria-disabled="true">@Html.ActionLink("Edit Treat", "Edit", new { id = Model.TreatId })</p>
+<p class="btn btn-outline-secondary" role="button" aria-disabled="true">@Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId })</p>
+<p class="btn btn-outline-secondary" role="button" aria-disabled="true">@Html.ActionLink("Back to list", "Index")</p>
+</div>
