@@ -41,7 +41,7 @@ An MVC app for a bakery owner to manage their treats and associated flavor with 
 ### Interacting with the app
 
 - To view and use the application, navigate to the `PierresTreats` folder and use the command `dotnet run` to start your local server and navigate to [http://localhost:5000](http://localhost:5000) in your web browser and interact with the application
-- To create, edit, or delete database entries from the app, you'll need to create a user login using your email and password
+- To create, edit, or delete database entries from the app, you'll need to create a user login using your email and password.  The password must contain at least six characters, include a capital letter, a digit, and a special character.
 
 ## Known Bugs
 
