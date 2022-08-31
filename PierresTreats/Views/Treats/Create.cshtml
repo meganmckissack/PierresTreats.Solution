@@ -5,14 +5,12 @@
 @model PierresTreats.Models.Treat
 
 <h4>Add a new Treat</h4>
-<form>
 @using (Html.BeginForm())
 {
-  <div class="mb-3">
-    <label for="treatName" class="form-label">@Html.LabelFor(model => model.TreatName)</label>
-    <input type="text" class="form-control" id="treatName" aria-describedby="treatName">
-  <div id="treatName" class="form-text">@Html.TextBoxFor(model => model.TreatName)</div>
-  </div>
+
+    @Html.LabelFor(model => model.TreatName)
+    @Html.TextBoxFor(model => model.TreatName)
+
   
 
   @Html.Label("Select Flavor")
@@ -20,6 +18,5 @@
 
   <input type="submit" class="btn btn-outline-secondary" value="Add new Treat" />
 }
-</form>
 <hr />
 <p class="btn btn-outline-secondary" role="button" aria-disabled="true">@Html.ActionLink("Show all Treats", "Index")</p>
